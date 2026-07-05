@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subham Mandal — Automation & AI Systems · Aspiring AI PM</title>
+<meta name="description" content="Subham Mandal builds AI-assisted automation at Cashfree Payments — agents, RPA pipelines and internal tools that cut manual ops work by half and log every step. Open to AI PM roles.">
+<meta property="og:title" content="Subham Mandal — Ops that run themselves">
+<meta property="og:description" content="AI agents, RPA pipelines and internal tools at Cashfree Payments. −69.5% manual effort, +14.7% SLA compliance. Open to AI PM roles.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1512'/%3E%3Crect x='18' y='20' width='10' height='24' fill='%2319C37D'/%3E%3Crect x='34' y='20' width='12' height='5' fill='%23C7E7D4'/%3E%3Crect x='34' y='30' width='12' height='5' fill='%23C7E7D4'/%3E%3Crect x='34' y='40' width='12' height='4' fill='%237FA391'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Subham Mandal",
+  "jobTitle": "Senior Analyst, Process Excellence",
+  "worksFor": { "@type": "Organization", "name": "Cashfree Payments" },
+  "email": "mailto:subhammandal1908@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+  "sameAs": ["https://www.linkedin.com/in/subham-mandal-work"],
+  "alumniOf": ["NIT Durgapur", "Jadavpur University"],
+  "knowsAbout": ["Robotic Process Automation", "AI Agents", "Product Management", "Playwright", "Node.js", "LLM Applications", "Process Excellence"]
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#F2F4F3;
+  --bg-elev:#FBFCFB;
+  --bg-cell:#F7F9F8;
+  --ink:#141A17;
+  --ink-soft:#4E5854;
+  --ink-faint:#7C8682;
+  --line:#DBE0DE;
+  --line-strong:#B9C2BE;
+  --accent:#2C4FE0;
+  --accent-ink:#1E38A8;
+  --accent-soft:#E7EBFC;
+  --live:#0E7A4F;
+  --live-dot:#19C37D;
+  --live-bg:#E1F3EA;
+  --build:#8F5600;
+  --build-bg:#F8ECD6;
+  --term-bg:#0F1512;
+  --term-line:#243129;
+  --term-text:#C7E7D4;
+  --term-dim:#7FA391;
+  --term-green:#3DDC97;
+  --term-amber:#F2C14E;
+  --radius:12px;
+  --radius-sm:8px;
+  --font-display:"Archivo",system-ui,sans-serif;
+  --font-body:"Archivo",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --maxw:1120px;
+  --shadow:0 1px 2px rgba(20,26,23,.05),0 8px 28px -12px rgba(20,26,23,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  font-family:var(--font-body);
+  font-size:16.5px;
+  line-height:1.65;
+  color:var(--ink);
+  background:
+    linear-gradient(rgba(20,26,23,.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20,26,23,.032) 1px, transparent 1px),
+    var(--bg);
+  background-size:56px 56px,56px 56px,auto;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent);color:#fff}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:200;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--font-mono)}
+
+/* ============ EYEBROWS / HEADINGS ============ */
+.eyebrow{
+  font-family:var(--font-mono);font-size:11.5px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--line-strong);flex:none}
+h2.sec-title{
+  font-family:var(--font-display);
+  font-variation-settings:"wdth" 118;
+  font-weight:780;font-size:clamp(1.7rem,3.4vw,2.35rem);
+  letter-spacing:-.015em;line-height:1.08;margin:12px 0 10px;
+  text-wrap:balance;
+}
+.sec-sub{color:var(--ink-soft);max-width:640px;font-size:16px}
+section{padding:88px 0 4px}
+.sec-head{margin-bottom:36px}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;color:var(--ink);font-size:15.5px}
+.brand:hover{text-decoration:none}
+.brand-mark{
+  width:26px;height:26px;border-radius:7px;background:var(--term-bg);
+  display:grid;place-items:center;flex:none;
+}
+.brand-mark span{width:7px;height:12px;background:var(--term-green);display:block;animation:blink 1.2s steps(1) infinite}
+@keyframes blink{50%{opacity:.25}}
+.nav-links{display:flex;gap:22px;margin-left:auto;align-items:center}
+.nav-links a{font-size:14px;color:var(--ink-soft);font-weight:500}
+.nav-links a:hover{color:var(--ink);text-decoration:none}
+.pill-status{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:11.5px;font-weight:500;letter-spacing:.04em;
+  color:var(--live);background:var(--live-bg);border:1px solid color-mix(in srgb, var(--live) 25%, transparent);
+  padding:5px 12px;border-radius:999px;white-space:nowrap;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--live-dot);position:relative;flex:none}
+.dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--live-dot);opacity:.5;animation:ping 2s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ping{75%,100%{transform:scale(1.9);opacity:0}}
+.kbtn{
+  display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:8px;
+  padding:6px 11px;transition:border-color .15s,color .15s;
+}
+.kbtn:hover{border-color:var(--line-strong);color:var(--ink)}
+.kbtn kbd{font-family:inherit;font-size:11px;background:var(--bg-cell);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 5px}
+@media(max-width:760px){
+  .nav-links a.nav-sec{display:none}
+  .pill-status .pill-txt{display:none}
+  .pill-status{padding:5px 9px}
+}
+</style>
+<style>
+/* ============ HERO ============ */
+.hero{padding:76px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-eyebrow{margin-bottom:22px}
+h1.display{
+  font-family:var(--font-display);
+  font-variation-settings:"wdth" 124;
+  font-weight:830;
+  font-size:clamp(2.7rem,6.4vw,4.9rem);
+  line-height:.98;letter-spacing:-.022em;
+  text-transform:uppercase;
+  margin-bottom:22px;text-wrap:balance;
+}
+h1.display .accent{color:var(--accent)}
+.hero-sub{color:var(--ink-soft);font-size:17.5px;max-width:520px;margin-bottom:14px}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-meta{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-faint);margin-bottom:28px;letter-spacing:.02em}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+  font-family:var(--font-body);font-weight:600;font-size:14.5px;
+  border-radius:10px;padding:12px 20px;border:1px solid transparent;
+  transition:transform .12s ease,box-shadow .12s ease,background .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--ink);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:#000}
+.btn-ghost{background:var(--bg-elev);border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--line-strong)}
+.btn .ext{font-size:12px;color:currentColor;opacity:.55}
+
+/* ============ TERMINAL (signature) ============ */
+.term{
+  background:var(--term-bg);border-radius:14px;overflow:hidden;
+  border:1px solid #1B241F;
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -24px rgba(15,21,18,.55);
+}
+.term-bar{
+  display:flex;align-items:center;gap:8px;padding:11px 14px;
+  background:#131A16;border-bottom:1px solid var(--term-line);
+}
+.term-bar i{width:10px;height:10px;border-radius:50%;background:#2A3730;display:block}
+.term-bar i:nth-child(1){background:#3A4A41}
+.term-title{margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--term-dim);letter-spacing:.06em}
+.term-body{padding:18px 18px 20px;font-family:var(--font-mono);font-size:12.8px;line-height:1.85;min-height:262px}
+.tl{display:flex;gap:10px;white-space:pre-wrap;opacity:0;transform:translateY(2px)}
+.tl.show{opacity:1;transform:none;transition:opacity .18s ease,transform .18s ease}
+.tl .ts{color:#4E6157;flex:none}
+.tl .tx{color:var(--term-text)}
+.tl.r-cmd .tx{color:var(--term-green);font-weight:500}
+.tl.r-ok .tx b{color:var(--term-green);font-weight:600}
+.tl.r-ok .tx{color:var(--term-text)}
+.tl.r-dim .tx{color:var(--term-dim)}
+.tl.r-done .tx{color:var(--term-green)}
+.tl.r-warn .tx{color:var(--term-amber)}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--term-green);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+.term-foot{
+  border-top:1px solid var(--term-line);padding:10px 16px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-mono);font-size:10.5px;color:var(--term-dim);letter-spacing:.08em;
+}
+.term-foot .ok{color:var(--term-green)}
+@media(max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding-top:56px}
+}
+
+/* ============ METRICS SHEET ============ */
+.sheet{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.sheet-head{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:12px 18px;border-bottom:1px solid var(--line);background:var(--bg-cell);
+  font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.08em;
+}
+.sheet-head .fx{color:var(--ink-soft)}
+.sheet-grid{display:grid;grid-template-columns:repeat(6,1fr)}
+.cell{padding:22px 20px 20px;border-right:1px solid var(--line);position:relative}
+.cell:last-child{border-right:none}
+.cell .col{
+  position:absolute;top:10px;right:12px;
+  font-family:var(--font-mono);font-size:10px;color:var(--line-strong);letter-spacing:.1em;
+}
+.cell .num{
+  font-family:var(--font-display);font-variation-settings:"wdth" 116;
+  font-weight:800;font-size:clamp(1.7rem,2.6vw,2.15rem);letter-spacing:-.02em;line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.cell .num .sign{color:var(--accent)}
+.cell .lab{font-size:12.5px;color:var(--ink-soft);margin-top:8px;line-height:1.45}
+.cell .src{font-family:var(--font-mono);font-size:10px;color:var(--ink-faint);margin-top:9px;letter-spacing:.03em}
+@media(max-width:1000px){.sheet-grid{grid-template-columns:repeat(3,1fr)}.cell:nth-child(3){border-right:none}.cell:nth-child(-n+3){border-bottom:1px solid var(--line)}}
+@media(max-width:560px){.sheet-grid{grid-template-columns:repeat(2,1fr)}.cell{border-right:1px solid var(--line)}.cell:nth-child(2n){border-right:none}.cell:nth-child(-n+4){border-bottom:1px solid var(--line)}.cell:nth-child(3){border-right:1px solid var(--line)}}
+</style>
+<style>
+/* ============ PROJECT CARDS ============ */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.fbtn{
+  cursor:pointer;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.03em;
+  padding:7px 14px;border-radius:999px;border:1px solid var(--line);
+  background:var(--bg-elev);color:var(--ink-soft);transition:all .15s;
+}
+.fbtn:hover{border-color:var(--line-strong);color:var(--ink)}
+.fbtn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:0;overflow:hidden;transition:border-color .15s,box-shadow .15s,opacity .2s,transform .2s;
+}
+.card:hover{border-color:var(--line-strong);box-shadow:var(--shadow)}
+.card.hide{display:none}
+.card-btn{
+  all:unset;display:block;width:100%;cursor:pointer;padding:22px 22px 18px;box-sizing:border-box;
+}
+.card-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:var(--radius)}
+.card-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.chip{
+  font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.1em;
+  padding:4px 9px;border-radius:6px;display:inline-flex;align-items:center;gap:6px;
+}
+.chip-live{color:var(--live);background:var(--live-bg)}
+.chip-live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--live-dot)}
+.chip-build{color:var(--build);background:var(--build-bg)}
+.chip-build::before{content:"";width:6px;height:6px;border-radius:50%;background:#E0A93E}
+.card-id{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.08em;margin-left:auto}
+.card h3{
+  font-family:var(--font-display);font-variation-settings:"wdth" 112;
+  font-weight:740;font-size:19.5px;letter-spacing:-.012em;line-height:1.2;margin-bottom:6px;
+}
+.card .tag-line{font-size:14.5px;color:var(--ink-soft)}
+.card-more{
+  display:flex;align-items:center;gap:7px;margin-top:14px;
+  font-family:var(--font-mono);font-size:11px;color:var(--accent-ink);letter-spacing:.06em;
+}
+.card-more svg{transition:transform .2s}
+.card.open .card-more svg{transform:rotate(45deg)}
+.card-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+.card.open .card-body{grid-template-rows:1fr}
+.card-body-in{overflow:hidden}
+.card-detail{padding:0 22px 20px;border-top:1px dashed var(--line);margin:0 0px;padding-top:16px}
+.card-detail p{font-size:14.5px;color:var(--ink-soft);margin-bottom:12px}
+.impact{
+  font-family:var(--font-mono);font-size:12px;color:var(--live);
+  background:var(--live-bg);border-radius:8px;padding:9px 12px;margin-bottom:14px;
+  display:flex;gap:8px;align-items:baseline;
+}
+.impact b{font-weight:600}
+.stack-row{display:flex;flex-wrap:wrap;gap:6px}
+.tt{
+  font-family:var(--font-mono);font-size:10.5px;color:var(--ink-soft);
+  background:var(--bg-cell);border:1px solid var(--line);border-radius:6px;padding:3px 8px;letter-spacing:.02em;
+}
+
+/* ============ PIPELINE ============ */
+.pipe-wrap{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 26px 30px;box-shadow:var(--shadow);overflow-x:auto;
+}
+.pipe{display:flex;align-items:stretch;gap:0;min-width:820px;position:relative}
+.pnode{flex:1;position:relative;text-align:center;padding:0 8px}
+.pnode-box{
+  background:var(--bg-cell);border:1px solid var(--line);border-radius:10px;
+  padding:14px 10px 12px;position:relative;z-index:2;
+}
+.pnode-box .pn-ic{font-size:17px;line-height:1;margin-bottom:7px}
+.pnode-box .pn-t{font-weight:650;font-size:13.5px;letter-spacing:-.01em}
+.pnode-box .pn-s{font-family:var(--font-mono);font-size:10px;color:var(--ink-faint);margin-top:3px;letter-spacing:.06em;text-transform:uppercase}
+.plink{width:64px;flex:none;position:relative;display:flex;align-items:center}
+.plink::before{content:"";height:1.5px;width:100%;background:repeating-linear-gradient(90deg,var(--line-strong) 0 6px,transparent 6px 11px)}
+.plink::after{
+  content:"";position:absolute;right:-1px;top:50%;transform:translateY(-50%);
+  border-left:6px solid var(--line-strong);border-top:4px solid transparent;border-bottom:4px solid transparent;
+}
+.packet{
+  position:absolute;top:50%;left:0;width:9px;height:9px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
+  transform:translate(-4px,-50%);animation:travel 2.6s linear infinite;
+}
+@keyframes travel{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+.plink:nth-of-type(2) .packet{animation-delay:0s}
+.plink:nth-of-type(4) .packet{animation-delay:.65s}
+.plink:nth-of-type(6) .packet{animation-delay:1.3s}
+.plink:nth-of-type(8) .packet{animation-delay:1.95s}
+.pipe-cap{
+  margin-top:22px;font-size:14.5px;color:var(--ink-soft);max-width:760px;
+}
+.pipe-cap b{color:var(--ink);font-weight:600}
+.pipe-log{
+  margin-top:16px;font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);
+  background:var(--bg-cell);border:1px dashed var(--line);border-radius:8px;padding:10px 14px;
+}
+.pipe-log .g{color:var(--live)}
+
+/* ============ CHANGELOG ============ */
+.log-list{border-left:1.5px solid var(--line-strong);margin-left:6px;padding-left:0}
+.rel{position:relative;padding:0 0 42px 34px}
+.rel:last-child{padding-bottom:8px}
+.rel::before{
+  content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:var(--bg);border:2.5px solid var(--ink);
+}
+.rel.current::before{background:var(--live-dot);border-color:var(--live)}
+.rel-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.ver{
+  font-family:var(--font-mono);font-size:11.5px;font-weight:600;color:var(--accent-ink);
+  background:var(--accent-soft);padding:3px 9px;border-radius:6px;letter-spacing:.04em;
+}
+.rel h3{font-family:var(--font-display);font-variation-settings:"wdth" 112;font-weight:730;font-size:19px;letter-spacing:-.01em}
+.rel .org{color:var(--ink-soft);font-weight:500;font-size:15px}
+.rel .dates{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.03em;margin-bottom:12px}
+.rel ul{list-style:none;display:grid;gap:7px;max-width:720px}
+.rel li{font-size:14.8px;color:var(--ink-soft);padding-left:20px;position:relative}
+.rel li::before{content:"+";position:absolute;left:0;color:var(--live);font-family:var(--font-mono);font-weight:600}
+.rel li b{color:var(--ink);font-weight:600}
+.edu{
+  margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;
+}
+.edu-card{
+  flex:1;min-width:250px;background:var(--bg-elev);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+}
+.edu-card .d{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.edu-card .t{font-weight:650;font-size:15px;letter-spacing:-.01em}
+.edu-card .s{font-size:13.5px;color:var(--ink-soft);margin-top:2px}
+</style>
+<style>
+/* ============ STACK + RUNBOOK ============ */
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.stack-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.stack-grid{grid-template-columns:1fr}}
+.sgroup{background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.sgroup .sg-t{
+  font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;display:flex;gap:8px;align-items:center;
+}
+.sgroup .sg-t::after{content:"";flex:1;height:1px;background:var(--line)}
+.sgroup .chips{display:flex;flex-wrap:wrap;gap:7px}
+
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.rules{grid-template-columns:1fr}}
+.rule{
+  background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 20px 18px;display:flex;gap:16px;transition:border-color .15s;
+}
+.rule:hover{border-color:var(--line-strong)}
+.rule .rid{
+  font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--accent-ink);
+  letter-spacing:.06em;flex:none;padding-top:3px;
+}
+.rule .rt{font-weight:650;font-size:15.5px;letter-spacing:-.01em;margin-bottom:4px}
+.rule .rd{font-size:14px;color:var(--ink-soft)}
+
+/* ============ CONTACT ============ */
+.contact{padding-bottom:60px}
+.contact-box{
+  background:var(--term-bg);color:var(--term-text);border-radius:18px;
+  padding:clamp(38px,6vw,64px);position:relative;overflow:hidden;
+  box-shadow:0 30px 70px -30px rgba(15,21,18,.5);
+}
+.contact-box::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(rgba(199,231,212,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(199,231,212,.05) 1px,transparent 1px);
+  background-size:44px 44px;pointer-events:none;
+}
+.contact-box .eyebrow{color:var(--term-dim)}
+.contact-box .eyebrow::before{background:#37473F}
+.contact-box h2{
+  font-family:var(--font-display);font-variation-settings:"wdth" 122;font-weight:820;
+  font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;line-height:1.02;
+  color:#F0FAF4;text-transform:uppercase;margin:14px 0 14px;position:relative;
+}
+.contact-box h2 .g{color:var(--term-green)}
+.contact-box p{color:var(--term-dim);max-width:560px;font-size:16px;position:relative;margin-bottom:30px}
+.contact-ctas{display:flex;gap:12px;flex-wrap:wrap;position:relative}
+.btn-term{
+  background:var(--term-green);color:#07130C;border:none;
+}
+.btn-term:hover{background:#5FE7AC}
+.btn-term-ghost{background:transparent;border:1px solid #33443B;color:var(--term-text)}
+.btn-term-ghost:hover{border-color:var(--term-dim)}
+.contact-mail{
+  margin-top:26px;font-family:var(--font-mono);font-size:12.5px;color:var(--term-dim);position:relative;
+}
+.contact-mail span{color:var(--term-text)}
+
+footer{padding:34px 0 44px}
+.foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;
+  font-family:var(--font-mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.03em}
+.foot-in a{color:var(--ink-soft)}
+
+/* ============ COMMAND PALETTE ============ */
+.pal-overlay{
+  position:fixed;inset:0;background:rgba(20,26,23,.4);backdrop-filter:blur(3px);
+  display:none;z-index:200;padding:14vh 20px 20px;
+}
+.pal-overlay.open{display:flex;justify-content:center;align-items:flex-start}
+.pal{
+  width:100%;max-width:560px;background:var(--bg-elev);border:1px solid var(--line);
+  border-radius:14px;box-shadow:0 30px 80px -20px rgba(20,26,23,.4);overflow:hidden;
+  animation:palin .16s ease;
+}
+@keyframes palin{from{opacity:0;transform:translateY(-8px) scale(.985)}to{opacity:1;transform:none}}
+.pal-input-row{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.pal-input-row .pi{color:var(--ink-faint);font-family:var(--font-mono);font-size:13px}
+.pal input{
+  flex:1;border:none;outline:none;background:transparent;font-family:var(--font-body);
+  font-size:15.5px;color:var(--ink);
+}
+.pal input::placeholder{color:var(--ink-faint)}
+.pal-list{max-height:320px;overflow-y:auto;padding:8px}
+.pal-sec{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);padding:10px 12px 5px}
+.pal-item{
+  all:unset;display:flex;align-items:center;gap:12px;width:100%;box-sizing:border-box;
+  padding:10px 12px;border-radius:9px;cursor:pointer;font-size:14.5px;color:var(--ink);
+}
+.pal-item .glyph{font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);width:18px;text-align:center;flex:none}
+.pal-item .hint{margin-left:auto;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);letter-spacing:.05em}
+.pal-item.active,.pal-item:hover{background:var(--accent-soft)}
+.pal-item.active .glyph{color:var(--accent-ink)}
+.pal-item.hide{display:none}
+.pal-foot{
+  border-top:1px solid var(--line);padding:9px 16px;display:flex;gap:16px;
+  font-family:var(--font-mono);font-size:10.5px;color:var(--ink-faint);
+}
+.pal-foot kbd{background:var(--bg-cell);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;font-family:inherit}
+
+/* ============ TOAST + REVEAL ============ */
+.toast{
+  position:fixed;bottom:26px;left:50%;transform:translate(-50%,16px);
+  background:var(--ink);color:#fff;font-family:var(--font-mono);font-size:12.5px;
+  padding:10px 18px;border-radius:999px;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;z-index:300;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast .g{color:var(--term-green)}
+[data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+[data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Subham Mandal — home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      Subham Mandal
+    </a>
+    <div class="nav-links">
+      <a class="nav-sec" href="#systems">Systems</a>
+      <a class="nav-sec" href="#pipeline">Pipeline</a>
+      <a class="nav-sec" href="#changelog">Changelog</a>
+      <a class="nav-sec" href="#contact">Contact</a>
+      <span class="pill-status"><span class="dot" aria-hidden="true"></span><span class="pill-txt">Open to AI PM roles</span></span>
+      <button class="kbtn" id="palBtn" aria-haspopup="dialog" aria-label="Open command palette">
+        Search <kbd>⌘K</kbd>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow hero-eyebrow">Subham Mandal · Bengaluru, IN · Cashfree Payments</p>
+      <h1 class="display">Ops that run <span class="accent">themselves.</span></h1>
+      <p class="hero-sub">I design and ship <strong>AI-assisted automation</strong> for fintech operations — agents, browser-RPA pipelines and internal tools that cut manual work by half and <strong>log every step</strong>. Now heading toward AI product management.</p>
+      <p class="hero-meta">Senior Analyst, Process Excellence @ Cashfree · ex-Wipro · MBA, NIT Durgapur</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" data-copy-email>Copy email</button>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/subham-mandal-work" target="_blank" rel="noopener">LinkedIn <span class="ext">↗</span></a>
+        <a class="btn btn-ghost" href="mailto:subhammandal1908@gmail.com">Say hello <span class="ext">✉</span></a>
+      </div>
+    </div>
+    <div class="term" role="img" aria-label="Terminal log booting Subham's profile: role Senior Analyst Process Excellence at Cashfree, 5+ automation lifecycles shipped, minus 69.5 percent manual effort, plus 14.7 percent SLA compliance, open to AI PM roles, all systems operational.">
+      <div class="term-bar" aria-hidden="true">
+        <i></i><i></i><i></i>
+        <span class="term-title">subham@cashfree — run.log</span>
+      </div>
+      <div class="term-body" id="termBody" aria-hidden="true"></div>
+      <div class="term-foot" aria-hidden="true">
+        <span>PIPELINE&nbsp;·&nbsp;PROFILE-BOOT</span>
+        <span class="ok">● 0 ERRORS / 0 WARNINGS</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ METRICS ============ -->
+<section id="impact" aria-label="Impact metrics" style="padding-top:64px">
+  <div class="wrap" data-reveal>
+    <div class="sheet">
+      <div class="sheet-head">
+        <span>impact_metrics.sheet</span>
+        <span class="fx">fx&nbsp; =MEASURED_IN_PRODUCTION()</span>
+      </div>
+      <div class="sheet-grid">
+        <div class="cell"><span class="col">A</span><div class="num"><span class="sign"></span><span data-count="70" data-suffix="%">0%</span></div><div class="lab">faster deployment velocity</div><div class="src">rpa · playwright + node</div></div>
+        <div class="cell"><span class="col">B</span><div class="num"><span class="sign">−</span><span data-count="69.5" data-suffix="%">0%</span></div><div class="lab">manual ops effort</div><div class="src">5+ automation lifecycles</div></div>
+        <div class="cell"><span class="col">C</span><div class="num"><span class="sign">−</span><span data-count="49.8" data-suffix="%">0%</span></div><div class="lab">manual validation</div><div class="src">ai monitoring tools</div></div>
+        <div class="cell"><span class="col">D</span><div class="num"><span class="sign">+</span><span data-count="31.2" data-suffix="%">0%</span></div><div class="lab">decisioning speed</div><div class="src">transaction analytics</div></div>
+        <div class="cell"><span class="col">E</span><div class="num"><span class="sign">−</span><span data-count="27.3" data-suffix="%">0%</span></div><div class="lab">onboarding TAT</div><div class="src">kyc onboarding agent</div></div>
+        <div class="cell"><span class="col">F</span><div class="num"><span class="sign">+</span><span data-count="14.7" data-suffix="%">0%</span></div><div class="lab">SLA compliance</div><div class="src">cross-team systems</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SYSTEMS ============ -->
+<section id="systems">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Systems in production</p>
+      <h2 class="sec-title">Shipped, running, measured.</h2>
+      <p class="sec-sub">Every system below runs (or is being hardened) against live merchant operations at Cashfree. Click any card for the problem, the build and the measured impact.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects" data-reveal>
+      <button class="fbtn" data-filter="all" aria-pressed="true">All systems</button>
+      <button class="fbtn" data-filter="ai" aria-pressed="false">AI &amp; agents</button>
+      <button class="fbtn" data-filter="rpa" aria-pressed="false">RPA pipelines</button>
+      <button class="fbtn" data-filter="data" aria-pressed="false">Data &amp; tooling</button>
+    </div>
+    <div class="cards" id="cards" data-reveal>
+
+      <article class="card" data-tags="ai rpa">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-01</span></div>
+          <h3>Merchant Onboarding Agent</h3>
+          <p class="tag-line">An agent that runs multi-step KYC review end to end — inside Retool.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>KYC review meant an analyst stepping through Retool's Stepwise interface case by case. The agent now walks the same flow with decision logic at every stage — setting MCC, validating documents, checking domain age and verifying bank details.</p>
+          <div class="impact"><b>Impact</b> 27.3% faster onboarding TAT</div>
+          <div class="stack-row"><span class="tt">Playwright</span><span class="tt">Node.js</span><span class="tt">Retool</span><span class="tt">Metabase</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="ai">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-02</span></div>
+          <h3>AI Content Compliance Crawler</h3>
+          <p class="tag-line">Merchant website review, minus most of the reviewing.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>Snowball-crawls each merchant site (sitemap + link following + path probing), screens content against a restricted-keyword dictionary, then uses an LLM to confirm commercial intent — so humans only see the cases that matter.</p>
+          <div class="impact"><b>Impact</b> ~50% less manual review effort</div>
+          <div class="stack-row"><span class="tt">Playwright</span><span class="tt">OpenAI API</span><span class="tt">httpx</span><span class="tt">Google Sheets</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="ai data">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-03</span></div>
+          <h3>LLM Knowledge Assistant</h3>
+          <p class="tag-line">A SQL copilot that actually knows the warehouse.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>A knowledge base + SOP-style prompt rulebook (RULEBOOK plus four schema files) grounding an internal assistant in five Redshift schemas — production query patterns, EAV key dictionaries, data traps and business-logic translation rules.</p>
+          <div class="impact"><b>Impact</b> Schema-grounded, error-free SQL for analytics workflows</div>
+          <div class="stack-row"><span class="tt">Gemini</span><span class="tt">Redshift</span><span class="tt">Metabase</span><span class="tt">Knowledge design</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="rpa">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-04</span></div>
+          <h3>UPI BO Bot</h3>
+          <p class="tag-line">Two-phase merchant routing pipeline — hands-free, end to end.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>Phase 1 generates UPI MIDs through a two-stage CSV upload/download flow. Phase 2 classifies merchants into five routing cases, executes the changes, disables creds and runs MID generation in Retool — then posts a combined .docx report to Slack.</p>
+          <div class="impact"><b>Impact</b> A multi-hour manual back-office run, fully automated</div>
+          <div class="stack-row"><span class="tt">Playwright</span><span class="tt">Metabase</span><span class="tt">Retool</span><span class="tt">Slack API</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="rpa">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-build">In build</span><span class="card-id">SYS-05</span></div>
+          <h3>Dormancy Reactivation Processor</h3>
+          <p class="tag-line">Six-path triage for dormant-merchant tickets.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>Classifies reactivation tickets through a six-path decision tree and routes each across Metabase, Freshdesk, Google Sheets, Retool and an Apps Script email webhook — currently in active debugging against live tickets.</p>
+          <div class="impact"><b>Impact</b> Targets the full dormant-merchant reactivation queue</div>
+          <div class="stack-row"><span class="tt">Freshdesk</span><span class="tt">Metabase</span><span class="tt">Apps Script</span><span class="tt">Retool</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="data">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-06</span></div>
+          <h3>Real-time Metrics Dashboard</h3>
+          <p class="tag-line">Process health, bot-vs-agent split and KPIs — one click deep.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>Config-driven Apps Script dashboard with clickable KPI cards across eight pipeline tabs; every row is bucketed success / failure / pending / skipped so failures are visible the moment they happen.</p>
+          <div class="impact"><b>Impact</b> Adopted by ops leadership for governance reviews</div>
+          <div class="stack-row"><span class="tt">Apps Script</span><span class="tt">Google Sheets</span><span class="tt">Dashboard design</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="rpa">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-07</span></div>
+          <h3>Name Change + MCC Pipeline</h3>
+          <p class="tag-line">The pipeline that learned to surface its own silent failures.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>End-to-end display-name and MCC changes across Freshdesk and Retool: dynamic PG-list building, gateway-driven execution steps, duplicate-reply prevention — plus a two-attempt retry wrapper and pre-flight checks that turned swallowed timeouts into visible, traceable errors.</p>
+          <div class="impact"><b>Impact</b> Verbatim-template replies, zero swallowed errors</div>
+          <div class="stack-row"><span class="tt">Playwright</span><span class="tt">Freshdesk</span><span class="tt">Retool</span><span class="tt">Metabase</span></div>
+        </div></div></div>
+      </article>
+
+      <article class="card" data-tags="rpa data">
+        <button class="card-btn" aria-expanded="false">
+          <div class="card-top"><span class="chip chip-live">Live</span><span class="card-id">SYS-08</span></div>
+          <h3>Standing Care Automations</h3>
+          <p class="tag-line">The always-on fleet behind Customer Care Operations.</p>
+          <span class="card-more"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> DETAILS</span>
+        </button>
+        <div class="card-body"><div class="card-body-in"><div class="card-detail">
+          <p>A portfolio of production pipelines running day in, day out: Refund Automation, KYC Automation, the Care Automation system, SR analysis reports and the Day-0 payment-mode enablement bot — each writing status + timestamp back to its sheet.</p>
+          <div class="impact"><b>Impact</b> Part of the 69.5% reduction in manual ops effort</div>
+          <div class="stack-row"><span class="tt">Playwright</span><span class="tt">Google Sheets</span><span class="tt">Metabase</span><span class="tt">Freshdesk</span></div>
+        </div></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PIPELINE ============ -->
+<section id="pipeline">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Anatomy of a pipeline</p>
+      <h2 class="sec-title">Every system shares the same spine.</h2>
+    </div>
+    <div class="pipe-wrap" data-reveal>
+      <div class="pipe" aria-label="Pipeline: Metabase to Google Sheets to Playwright bot to Retool and Freshdesk to Slack report">
+        <div class="pnode"><div class="pnode-box"><div class="pn-ic">▦</div><div class="pn-t">Metabase</div><div class="pn-s">query</div></div></div>
+        <div class="plink" aria-hidden="true"><span class="packet"></span></div>
+        <div class="pnode"><div class="pnode-box"><div class="pn-ic">▤</div><div class="pn-t">Google Sheets</div><div class="pn-s">state + log</div></div></div>
+        <div class="plink" aria-hidden="true"><span class="packet"></span></div>
+        <div class="pnode"><div class="pnode-box"><div class="pn-ic">⚙</div><div class="pn-t">Playwright bot</div><div class="pn-s">execute</div></div></div>
+        <div class="plink" aria-hidden="true"><span class="packet"></span></div>
+        <div class="pnode"><div class="pnode-box"><div class="pn-ic">▣</div><div class="pn-t">Retool · Freshdesk</div><div class="pn-s">act</div></div></div>
+        <div class="plink" aria-hidden="true"><span class="packet"></span></div>
+        <div class="pnode"><div class="pnode-box"><div class="pn-ic">◈</div><div class="pn-t">Slack + .docx</div><div class="pn-s">report</div></div></div>
+      </div>
+      <p class="pipe-cap"><b>Pull from Metabase, keep state in Sheets, execute with Playwright, act in Retool and Freshdesk, report to Slack.</b> Every step writes status + timestamp back to the sheet — so failures are traceable by design, not by luck.</p>
+      <div class="pipe-log" aria-hidden="true">[12:04:37] MID 8842019 &nbsp;→&nbsp; <span class="g">✓ Done</span> &nbsp;·&nbsp; [12:04:51] MID 8842020 &nbsp;→&nbsp; <span class="g">✓ Done</span> &nbsp;·&nbsp; [12:05:02] MID 8842021 &nbsp;→&nbsp; retry(2) → <span class="g">✓ Done</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHANGELOG ============ -->
+<section id="changelog">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Changelog</p>
+      <h2 class="sec-title">Release history.</h2>
+    </div>
+    <div class="log-list" data-reveal>
+
+      <div class="rel current">
+        <div class="rel-head"><span class="ver">v3.0 · CURRENT</span><h3>Senior Analyst, Process Excellence</h3><span class="org">— Cashfree Payments</span></div>
+        <p class="dates">MAY 2026 → PRESENT · BENGALURU</p>
+        <ul>
+          <li>Own the <b>end-to-end lifecycle</b> of process improvement and intelligent automation in Customer Care Ops — discovery, as-is/to-be mapping, stakeholder alignment, rollout, instrumentation.</li>
+          <li>Shipped the <b>LLM Knowledge Assistant</b>, <b>Merchant Onboarding Agent</b>, <b>AI Compliance Crawler</b> and the <b>Real-time Metrics Dashboard</b> (adopted for leadership governance reviews).</li>
+          <li>Report into Associate Director leadership; partner with <b>VPs and Directors</b> on cross-functional improvement initiatives.</li>
+        </ul>
+      </div>
+
+      <div class="rel">
+        <div class="rel-head"><span class="ver">v2.0</span><h3>Analyst, Process Excellence</h3><span class="org">— Cashfree Payments</span></div>
+        <p class="dates">MAY 2025 → MAY 2026 · BENGALURU</p>
+        <ul>
+          <li>Orchestrated <b>5+ automation lifecycles</b> end to end using DMAIC — <b>−69.5% manual effort</b>; mentored one intern.</li>
+          <li>Partnered with Product, Risk and Engineering on 3 scalable systems: <b>+14.7% SLA compliance</b>, <b>−27.3% onboarding TAT</b>, <b>+19.6% operational accuracy</b>.</li>
+          <li>Engineered <b>4 AI-powered monitoring tools</b> with root-cause analysis — +31.2% decisioning speed, −49.8% manual validation.</li>
+          <li>Recognition: <b>Champion Award</b>, Process Excellence.</li>
+        </ul>
+      </div>
+
+      <div class="rel">
+        <div class="rel-head"><span class="ver">v1.0</span><h3>Project Engineer</h3><span class="org">— Wipro</span></div>
+        <p class="dates">JUN 2021 → JUL 2023 · BENGALURU</p>
+        <ul>
+          <li>Optimized <b>Apache Spark</b> pipelines on large financial datasets via bottleneck and gap analysis — <b>−30% processing time</b>.</li>
+          <li>Standardized financial models in Excel, improving forecasting accuracy and boosting investment-decision efficiency by <b>42.5%</b>.</li>
+        </ul>
+      </div>
+
+      <div class="rel">
+        <div class="rel-head"><span class="ver">v0.x</span><h3>Internships during MBA</h3><span class="org">— Dashtoon · Emami Frank Ross</span></div>
+        <p class="dates">2024 · BENGALURU / KOLKATA</p>
+        <ul>
+          <li><b>Dashtoon</b> (community ops): engagement initiatives → +39.2% creator collaboration, +26.7% retention; analyzed 200+ user-feedback reports.</li>
+          <li><b>Emami Frank Ross</b> (marketing): 3+ multichannel campaigns → +21.8% effectiveness through data-driven experimentation.</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="edu" data-reveal>
+      <div class="edu-card"><div class="d">MBA · 2023–2025</div><div class="t">NIT Durgapur</div><div class="s">Marketing &amp; Operations · First Class · Head Placement Coordinator</div></div>
+      <div class="edu-card"><div class="d">B.E. · 2017–2021</div><div class="t">Jadavpur University</div><div class="s">Instrumentation &amp; Electronics · First Class</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Stack</p>
+      <h2 class="sec-title">Tools I reach for.</h2>
+    </div>
+    <div class="stack-grid" data-reveal>
+      <div class="sgroup"><div class="sg-t">Automation &amp; RPA</div><div class="chips"><span class="tt">Playwright</span><span class="tt">Node.js</span><span class="tt">JavaScript</span><span class="tt">Python</span><span class="tt">Apps Script</span><span class="tt">n8n</span><span class="tt">Zapier</span><span class="tt">REST APIs</span><span class="tt">CDP</span></div></div>
+      <div class="sgroup"><div class="sg-t">AI &amp; LLM</div><div class="chips"><span class="tt">OpenAI API</span><span class="tt">Google Gemini</span><span class="tt">AI agents</span><span class="tt">Prompt engineering</span><span class="tt">Knowledge-base design</span><span class="tt">Agentic workflows</span></div></div>
+      <div class="sgroup"><div class="sg-t">Data &amp; analytics</div><div class="chips"><span class="tt">SQL</span><span class="tt">Redshift</span><span class="tt">Metabase</span><span class="tt">Sheets API</span><span class="tt">Dashboards</span><span class="tt">KPI / SLA / TAT</span></div></div>
+      <div class="sgroup"><div class="sg-t">Ops tooling</div><div class="chips"><span class="tt">Retool</span><span class="tt">Freshdesk</span><span class="tt">Slack API</span><span class="tt">JIRA</span><span class="tt">Confluence</span><span class="tt">Figma</span><span class="tt">Excel</span></div></div>
+      <div class="sgroup"><div class="sg-t">Methods</div><div class="chips"><span class="tt">Lean Six Sigma</span><span class="tt">DMAIC</span><span class="tt">Root-cause analysis</span><span class="tt">Value-stream mapping</span><span class="tt">SOP design</span><span class="tt">Kaizen</span></div></div>
+      <div class="sgroup"><div class="sg-t">Product</div><div class="chips"><span class="tt">Requirements → MVP</span><span class="tt">Telemetry &amp; iteration</span><span class="tt">Experimentation</span><span class="tt">Stakeholder alignment</span><span class="tt">Written comms</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RUNBOOK ============ -->
+<section id="runbook">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow">Operating runbook</p>
+      <h2 class="sec-title">How I ship.</h2>
+      <p class="sec-sub">The rules every one of my systems is built to — written the way an SOP would write them.</p>
+    </div>
+    <div class="rules" data-reveal>
+      <div class="rule"><span class="rid">RULE-01</span><div><div class="rt">Happy path first, then armor.</div><div class="rd">Build the flow end to end, then layer in waits, retry loops and fallback selectors for every edge case.</div></div></div>
+      <div class="rule"><span class="rid">RULE-02</span><div><div class="rt">Reliability over elegance.</div><div class="rd">A boring script that never fails beats a clever one that fails silently. Silent failures get hunted and surfaced.</div></div></div>
+      <div class="rule"><span class="rid">RULE-03</span><div><div class="rt">Every step logs.</div><div class="rd">Status + timestamp written back to the sheet on every action — failures are traceable by design.</div></div></div>
+      <div class="rule"><span class="rid">RULE-04</span><div><div class="rt">Surgical fixes, never rewrites.</div><div class="rd">Targeted find-and-replace over full-file rewrites. Production systems earn their scars; respect them.</div></div></div>
+      <div class="rule"><span class="rid">RULE-05</span><div><div class="rt">Verify before you build.</div><div class="rd">Logic is checked against sample tickets and Metabase data before a line of automation is written.</div></div></div>
+      <div class="rule"><span class="rid">RULE-06</span><div><div class="rt">Templated outputs only.</div><div class="rd">Freshdesk replies use verbatim templates; reports ship as .docx to Slack. Consistency is a feature.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap" data-reveal>
+    <div class="contact-box">
+      <p class="eyebrow">Next run</p>
+      <h2>Let's build something<br>that runs <span class="g">itself.</span></h2>
+      <p>I'm exploring AI PM and product roles — internal tools, operations, risk and support platforms. If you're building any of that, I'd love to talk.</p>
+      <div class="contact-ctas">
+        <button class="btn btn-term" data-copy-email>Copy email</button>
+        <a class="btn btn-term-ghost" href="mailto:subhammandal1908@gmail.com?subject=Hello%20Subham">Write to me <span class="ext">✉</span></a>
+        <a class="btn btn-term-ghost" href="https://www.linkedin.com/in/subham-mandal-work" target="_blank" rel="noopener">LinkedIn <span class="ext">↗</span></a>
+      </div>
+      <p class="contact-mail">$ mail <span>subhammandal1908@gmail.com</span> · Bengaluru, IN · DMs open</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 SUBHAM MANDAL</span>
+    <span>SINGLE HTML FILE · NO FRAMEWORK · NO BUILD STEP</span>
+    <span>PRESS <a href="#" id="footPal">⌘K</a> TO NAVIGATE</span>
+  </div>
+</footer>
+
+<!-- ============ COMMAND PALETTE ============ -->
+<div class="pal-overlay" id="palOverlay">
+  <div class="pal" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="pal-input-row">
+      <span class="pi">›</span>
+      <input id="palInput" type="text" placeholder="Jump to a section or run a command…" autocomplete="off">
+    </div>
+    <div class="pal-list" id="palList">
+      <div class="pal-sec">Navigate</div>
+      <button class="pal-item" data-goto="#systems"><span class="glyph">◫</span>Systems in production<span class="hint">SECTION</span></button>
+      <button class="pal-item" data-goto="#pipeline"><span class="glyph">→</span>Anatomy of a pipeline<span class="hint">SECTION</span></button>
+      <button class="pal-item" data-goto="#changelog"><span class="glyph">⌥</span>Changelog · experience<span class="hint">SECTION</span></button>
+      <button class="pal-item" data-goto="#stack"><span class="glyph">▤</span>Stack<span class="hint">SECTION</span></button>
+      <button class="pal-item" data-goto="#runbook"><span class="glyph">✓</span>Operating runbook<span class="hint">SECTION</span></button>
+      <button class="pal-item" data-goto="#contact"><span class="glyph">✉</span>Contact<span class="hint">SECTION</span></button>
+      <div class="pal-sec">Actions</div>
+      <button class="pal-item" data-act="copy"><span class="glyph">⧉</span>Copy email address<span class="hint">ACTION</span></button>
+      <button class="pal-item" data-href="https://www.linkedin.com/in/subham-mandal-work"><span class="glyph">↗</span>Open LinkedIn<span class="hint">LINK</span></button>
+      <button class="pal-item" data-href="mailto:subhammandal1908@gmail.com"><span class="glyph">✉</span>Compose email<span class="hint">LINK</span></button>
+    </div>
+    <div class="pal-foot"><span><kbd>↑↓</kbd> navigate</span><span><kbd>↵</kbd> select</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"><span class="g">✓</span>&nbsp; Email copied — subhammandal1908@gmail.com</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var EMAIL = "subhammandal1908@gmail.com";
+
+  /* ---------- Terminal boot log ---------- */
+  var LINES = [
+    { ts:"",           cls:"r-cmd",  tx:"$ node subham --profile" },
+    { ts:"[09:41:00]", cls:"r-dim",  tx:"boot     portfolio v3.0 — bengaluru, in" },
+    { ts:"[09:41:00]", cls:"r-ok",   tx:"\u2713 role     Sr. Analyst, Process Excellence @ Cashfree" },
+    { ts:"[09:41:01]", cls:"r-ok",   tx:"\u2713 shipped  5+ automation lifecycles, end to end" },
+    { ts:"[09:41:01]", cls:"r-ok",   tx:"\u2713 impact   \u221269.5% manual effort \u00b7 +14.7% SLA" },
+    { ts:"[09:41:02]", cls:"r-ok",   tx:"\u2713 stack    playwright \u00b7 node \u00b7 llm apis \u00b7 metabase \u00b7 retool" },
+    { ts:"[09:41:02]", cls:"r-ok",   tx:"\u2713 status   open to AI PM roles" },
+    { ts:"[09:41:02]", cls:"r-done", tx:"done     all systems operational (0 errors)" }
+  ];
+  var termBody = document.getElementById("termBody");
+
+  function buildLine(l){
+    var row = document.createElement("div");
+    row.className = "tl " + l.cls;
+    var ts = document.createElement("span"); ts.className = "ts"; ts.textContent = l.ts;
+    var tx = document.createElement("span"); tx.className = "tx";
+    if(!l.ts){ ts.style.display = "none"; }
+    row.appendChild(ts); row.appendChild(tx);
+    termBody.appendChild(row);
+    return { row: row, tx: tx };
+  }
+
+  function typeAll(){
+    var i = 0;
+    function nextLine(){
+      if(i >= LINES.length){
+        var last = termBody.lastElementChild;
+        if(last){
+          var c = document.createElement("span");
+          c.className = "cursor";
+          last.querySelector(".tx").appendChild(c);
+        }
+        return;
+      }
+      var l = LINES[i++];
+      var el = buildLine(l);
+      el.row.classList.add("show");
+      if(reduced){ el.tx.textContent = l.tx; setTimeout(nextLine, 0); return; }
+      var j = 0;
+      var iv = setInterval(function(){
+        j += 2;
+        el.tx.textContent = l.tx.slice(0, j);
+        if(j >= l.tx.length){ clearInterval(iv); setTimeout(nextLine, 110); }
+      }, 11);
+    }
+    setTimeout(nextLine, reduced ? 0 : 350);
+  }
+  typeAll();
+
+  /* ---------- Count-up metrics ---------- */
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute("data-count"));
+    var suffix = el.getAttribute("data-suffix") || "";
+    var decimals = (String(target).split(".")[1] || "").length;
+    if(reduced){ el.textContent = target.toFixed(decimals) + suffix; return; }
+    var dur = 1300, start = null;
+    function step(t){
+      if(!start) start = t;
+      var p = Math.min((t - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(decimals) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counted = false;
+  var counters = document.querySelectorAll("[data-count]");
+  var countObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !counted){
+        counted = true;
+        counters.forEach(animateCount);
+        countObs.disconnect();
+      }
+    });
+  }, { threshold: 0.35 });
+  if(counters.length) countObs.observe(counters[0].closest(".sheet"));
+
+  /* ---------- Scroll reveals ---------- */
+  var revObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("in"); revObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll("[data-reveal]").forEach(function(el){ revObs.observe(el); });
+
+  /* ---------- Card expanders ---------- */
+  document.querySelectorAll(".card-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var card = btn.closest(".card");
+      var open = card.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  /* ---------- Filters ---------- */
+  var fbtns = document.querySelectorAll(".fbtn");
+  var cards = document.querySelectorAll(".card");
+  fbtns.forEach(function(b){
+    b.addEventListener("click", function(){
+      fbtns.forEach(function(x){ x.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+      var f = b.getAttribute("data-filter");
+      cards.forEach(function(c){
+        var tags = c.getAttribute("data-tags") || "";
+        var show = f === "all" || tags.indexOf(f) !== -1;
+        c.classList.toggle("hide", !show);
+      });
+    });
+  });
+
+  /* ---------- Copy email + toast ---------- */
+  var toast = document.getElementById("toast");
+  var toastTimer = null;
+  function showToast(){
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 2400);
+  }
+  function copyEmail(){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(EMAIL).then(showToast, fallbackCopy);
+    } else { fallbackCopy(); }
+  }
+  function fallbackCopy(){
+    var ta = document.createElement("textarea");
+    ta.value = EMAIL; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); showToast(); } catch(e){ window.location.href = "mailto:" + EMAIL; }
+    document.body.removeChild(ta);
+  }
+  document.querySelectorAll("[data-copy-email]").forEach(function(b){
+    b.addEventListener("click", copyEmail);
+  });
+
+  /* ---------- Command palette ---------- */
+  var overlay = document.getElementById("palOverlay");
+  var input = document.getElementById("palInput");
+  var items = Array.prototype.slice.call(document.querySelectorAll(".pal-item"));
+  var active = 0;
+
+  function visibleItems(){
+    return items.filter(function(i){ return !i.classList.contains("hide"); });
+  }
+  function setActive(idx){
+    var vis = visibleItems();
+    if(!vis.length) return;
+    active = (idx + vis.length) % vis.length;
+    items.forEach(function(i){ i.classList.remove("active"); });
+    vis[active].classList.add("active");
+    vis[active].scrollIntoView({ block: "nearest" });
+  }
+  function openPal(){
+    overlay.classList.add("open");
+    input.value = "";
+    filterPal("");
+    setActive(0);
+    setTimeout(function(){ input.focus(); }, 10);
+    document.body.style.overflow = "hidden";
+  }
+  function closePal(){
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  function filterPal(q){
+    q = q.trim().toLowerCase();
+    items.forEach(function(i){
+      var t = i.textContent.toLowerCase();
+      i.classList.toggle("hide", q !== "" && t.indexOf(q) === -1);
+    });
+    document.querySelectorAll(".pal-sec").forEach(function(s){
+      s.style.display = q === "" ? "" : "none";
+    });
+    setActive(0);
+  }
+  function runItem(el){
+    if(!el) return;
+    var goto_ = el.getAttribute("data-goto");
+    var act = el.getAttribute("data-act");
+    var href = el.getAttribute("data-href");
+    closePal();
+    if(goto_){
+      var t = document.querySelector(goto_);
+      if(t) t.scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    } else if(act === "copy"){
+      copyEmail();
+    } else if(href){
+      if(href.indexOf("mailto:") === 0) window.location.href = href;
+      else window.open(href, "_blank", "noopener");
+    }
+  }
+
+  document.getElementById("palBtn").addEventListener("click", openPal);
+  document.getElementById("footPal").addEventListener("click", function(e){ e.preventDefault(); openPal(); });
+  overlay.addEventListener("click", function(e){ if(e.target === overlay) closePal(); });
+  items.forEach(function(i){ i.addEventListener("click", function(){ runItem(i); }); });
+  input.addEventListener("input", function(){ filterPal(input.value); });
+
+  document.addEventListener("keydown", function(e){
+    if((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")){
+      e.preventDefault();
+      overlay.classList.contains("open") ? closePal() : openPal();
+      return;
+    }
+    if(!overlay.classList.contains("open")) return;
+    if(e.key === "Escape"){ closePal(); }
+    else if(e.key === "ArrowDown"){ e.preventDefault(); setActive(active + 1); }
+    else if(e.key === "ArrowUp"){ e.preventDefault(); setActive(active - 1); }
+    else if(e.key === "Enter"){
+      e.preventDefault();
+      runItem(visibleItems()[active]);
+    }
+  });
+
+  /* ---------- Show Ctrl on non-mac ---------- */
+  if(navigator.platform && navigator.platform.indexOf("Mac") === -1){
+    var kbd = document.querySelector("#palBtn kbd");
+    if(kbd) kbd.textContent = "Ctrl K";
+  }
+})();
+</script>
+</body>
+</html>
