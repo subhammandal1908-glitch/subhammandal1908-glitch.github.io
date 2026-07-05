@@ -568,6 +568,34 @@ footer{padding:34px 0 44px}
   .op-card{width:min(232px,72%)}
 }
 </style>
+<style>
+/* ============ RETICLE CURSOR ============ */
+html.fx-cursor *{cursor:none}
+html.fx-cursor input,html.fx-cursor textarea,html.fx-cursor select{cursor:text}
+.cur{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;opacity:0;transition:opacity .3s ease}
+.cur.on{opacity:1}
+#curDot span{
+  display:block;width:7px;height:7px;border-radius:50%;
+  background:var(--live-dot);transform:translate(-50%,-50%) scale(1);
+  transition:transform .18s ease;
+  box-shadow:0 0 10px rgba(25,195,125,.55);
+}
+#curDot.is-hover span{transform:translate(-50%,-50%) scale(.55)}
+#curRet .ret{
+  display:block;width:34px;height:34px;position:relative;
+  transform:translate(-50%,-50%) scale(1) rotate(0deg);
+  transition:transform .3s cubic-bezier(.2,.8,.2,1);
+}
+#curRet .ret i{position:absolute;width:9px;height:9px;border:0 solid var(--live-dot);opacity:.9}
+#curRet .ret i:nth-child(1){top:0;left:0;border-top-width:1.5px;border-left-width:1.5px}
+#curRet .ret i:nth-child(2){top:0;right:0;border-top-width:1.5px;border-right-width:1.5px}
+#curRet .ret i:nth-child(3){bottom:0;left:0;border-bottom-width:1.5px;border-left-width:1.5px}
+#curRet .ret i:nth-child(4){bottom:0;right:0;border-bottom-width:1.5px;border-right-width:1.5px}
+#curRet.is-hover .ret{transform:translate(-50%,-50%) scale(1.5) rotate(45deg)}
+#curRet.is-down .ret{transform:translate(-50%,-50%) scale(.7) rotate(0deg)}
+#curRet.is-hover.is-down .ret{transform:translate(-50%,-50%) scale(1.1) rotate(45deg)}
+@media (prefers-reduced-motion:reduce){.cur{display:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -964,6 +992,9 @@ footer{padding:34px 0 44px}
 
 <div class="toast" id="toast" role="status"><span class="g">✓</span>&nbsp; Email copied — subhammandal1908@gmail.com</div>
 
+<div class="cur" id="curDot" aria-hidden="true"><span></span></div>
+<div class="cur" id="curRet" aria-hidden="true"><span class="ret"><i></i><i></i><i></i><i></i></span></div>
+
 <script>
 (function(){
   "use strict";
@@ -1207,6 +1238,49 @@ footer{padding:34px 0 44px}
       runItem(visibleItems()[active]);
     }
   });
+
+  /* ---------- Reticle cursor ---------- */
+  (function(){
+    var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if(!fine || reduced) return;
+    var dot = document.getElementById("curDot");
+    var ret = document.getElementById("curRet");
+    if(!dot || !ret) return;
+    document.documentElement.classList.add("fx-cursor");
+    var tx = window.innerWidth / 2, ty = window.innerHeight / 2;
+    var rx = tx, ry = ty, shown = false;
+
+    window.addEventListener("mousemove", function(e){
+      tx = e.clientX; ty = e.clientY;
+      if(!shown){
+        shown = true; rx = tx; ry = ty;
+        dot.classList.add("on"); ret.classList.add("on");
+      }
+      dot.style.transform = "translate3d(" + tx + "px," + ty + "px,0)";
+    }, { passive: true });
+
+    (function loop(){
+      rx += (tx - rx) * 0.16;
+      ry += (ty - ry) * 0.16;
+      ret.style.transform = "translate3d(" + rx + "px," + ry + "px,0)";
+      requestAnimationFrame(loop);
+    })();
+
+    var HOVER_SEL = "a, button, input, summary, [role='button'], .fbtn, .card-btn, .pal-item";
+    document.addEventListener("mouseover", function(e){
+      var hit = e.target.closest && e.target.closest(HOVER_SEL);
+      ret.classList.toggle("is-hover", !!hit);
+      dot.classList.toggle("is-hover", !!hit);
+    }, true);
+
+    window.addEventListener("mousedown", function(){ ret.classList.add("is-down"); });
+    window.addEventListener("mouseup", function(){ ret.classList.remove("is-down"); });
+
+    document.addEventListener("mouseout", function(e){
+      if(!e.relatedTarget){ dot.classList.remove("on"); ret.classList.remove("on"); shown = false; }
+    });
+    window.addEventListener("blur", function(){ dot.classList.remove("on"); ret.classList.remove("on"); shown = false; });
+  })();
 
   /* ---------- Show Ctrl on non-mac ---------- */
   if(navigator.platform && navigator.platform.indexOf("Mac") === -1){
